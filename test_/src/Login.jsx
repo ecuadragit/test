@@ -74,8 +74,6 @@ const Test = () => {
     //   }
     // };
   
-    
-
 
 
     const handleRadioClick = () => {
