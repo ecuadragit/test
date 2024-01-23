@@ -63,6 +63,31 @@ app.post('/api/actualizar-monto-seguro', (req, res) => {
   });
 });
 
+// Ruta para la API POST de login
+app.post('/api/login', (req, res) => {
+  const { dni, phone, carplate } = req.body;
+
+  // Realiza la consulta SQL para verificar si el usuario existe
+  const sql = `SELECT * FROM users WHERE dni = '${dni}'`;
+
+  db.query(sql, (error, results, fields) => {
+    if (error) {
+      console.error('Error al realizar la consulta de login:', error);
+      res.status(400).json({ message: 'Error interno del servidor' });
+    } else {
+      // Verifica si se encontró un usuario con los valores proporcionados
+      if (results.length > 0) {
+        console.log('Login exitoso');
+        // Devuelve la fila completa como un arreglo en la respuesta
+        res.json({ user: results[0] });
+      } else {
+        console.log('Credenciales incorrectas');
+        res.status(401).json({ message: 'Credenciales incorrectas' });
+      }
+    }
+  });
+});
+
 
 
 
