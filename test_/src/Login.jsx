@@ -13,7 +13,7 @@ const Test = () => {
 
     const [dni, setDni] = useState('');
     const [phone, setPhone] = useState('');
-    const [accessCode, setAccessCode] = useState('');
+    const [carPlate, setCarPlate] = useState('');
     const [documentOption, setDocumentOption] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [users, setUsers] = useState([]);
@@ -31,10 +31,10 @@ const Test = () => {
   
     const handleLogin = () => {
       // Verifica si el usuario existe en la lista
-      const user = users.find((u) => u.dni === dni );
-  
+      const user = users.find((u) => u.dni === dni && u.phone === phone && u.carPlate === carPlate);
+    
       if (user) {
-         // Inicio de sesión exitoso, redirige al usuario a la página InsuranceInfo
+        // Inicio de sesión exitoso, redirige al usuario a la página InsuranceInfo
         history.push({
           pathname: '/insurance-info',
           state: { user: user }, // Pasa el objeto del usuario como estado
@@ -43,6 +43,41 @@ const Test = () => {
         setErrorMessage('Credenciales de inicio de sesión inválidas');
       }
     };
+    
+    // const handleLogin = async () => {
+    //   try {
+    //     // Aquí deberías realizar la autenticación con tu backend
+    //     // En este ejemplo, supondré que tu backend devuelve un objeto de usuario al autenticar correctamente
+    //     const response = await fetch('http://localhost:3000/api/login', {
+    //       method: 'POST',
+    //       headers: {
+    //         'Content-Type': 'application/json',
+    //       },
+    //       body: JSON.stringify({ dni, phone, carPlate }),
+    //     });
+  
+    //     if (response.ok) {
+    //       const user = await response.json();
+    //       const token = authService.generateToken(user);
+  
+    //       // Almacena el token en el almacenamiento local (puedes usar sessionStorage o cookies según tus necesidades)
+    //       localStorage.setItem('authToken', token);
+  
+    //       // Redirige a la página deseada después del inicio de sesión
+    //       history.push('/insurance-info');
+    //     } else {
+    //       setErrorMessage('Credenciales de inicio de sesión inválidas');
+    //     }
+    //   } catch (error) {
+    //     console.error('Error al iniciar sesión:', error);
+    //     setErrorMessage('Error al iniciar sesión');
+    //   }
+    // };
+  
+    
+
+
+
     const handleRadioClick = () => {
       console.log(isRadioChecked);
       setIsRadioChecked(!isRadioChecked);
