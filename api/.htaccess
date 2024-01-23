@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Redirige todo el tráfico no existente a tu aplicación Node.js
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ http://127.0.0.1:3000/$1 [P,L]
+
+# Si necesitas configurar el proxy inverso para WebSocket (opcional)
+RewriteCond %{HTTP:Upgrade} websocket [NC]
+RewriteCond %{HTTP:Connection} upgrade [NC]
+RewriteRule ^(.*)$ ws://127.0.0.1:3000/$1 [P,L]
