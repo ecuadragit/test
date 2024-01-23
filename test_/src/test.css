@@ -331,3 +331,42 @@ letter-spacing: 0.2px;
 .mr-thanks{
   margin-left: -4rem;
 }
+.ml-50{
+  margin-left: 20rem;
+}
+
+@media screen and (max-width: 768px) {
+  /* Estilos para pantallas con un ancho máximo de 768px */
+  .ml-50{
+    margin-left: 8rem;
+  }
+  .mask{
+    width: 10rem;
+    margin:auto;
+
+  }
+  .mr-rimac_2{
+
+  }
+  
+  .text__-{
+    display: none;
+  }
+
+
+  .desapear{
+    display: none;
+  }
+  .derecha{
+    margin-left: 15rem;
+  }
+  .logo_r{
+    margin-top: 0;
+    width: 60%;
+    margin-left: 8 rem;
+  }
+
+  .transparent{
+    display:none;
+  }
+}

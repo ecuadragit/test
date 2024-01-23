@@ -89,36 +89,38 @@ const Test = () => {
     
             {/* Contenido dividido verticalmente */}
             <div className='row'>
-            <div className='col-md-6 col-lg-6 col-xl-6 d-flex align-items-center justify-content-center mt-rimac'>
-                    <div className="text-center ">
-                        <div>               
-                            <img src="mask.png" className='ml-5' alt="text" height="300" />
-                        </div>
-                        {/* Agrega tu contenido para la mitad izquierda aquí */}
-                        <p className='nuevo mr-rimac '>¡NUEVO!</p>
-                        <p className='seguro text-left'>Seguro <span className='vehicular'>Vehicular</span> </p>
-                        <p className='tracking mr-rimac_2'>Tracking</p>
-                        <p className='cuentanos ml-0'>Cuentanos donde le haras seguimiento a tu </p>
-                        <p className='cuentanos mr-rimac_3'> seguro</p>
+                <div className='col-md-6 col-lg-6 col-xl-6 d-flex col-xs-12  align-items-center justify-content-center mt-rimac'>
+                        <div className="row ">
+                            <div className=' col-xs-6   mx-5' >               
+                                <img src="mask.png" className='ml-5 mask' alt="text" height="300" />
+                            </div>
+                            {/* Agrega tu contenido para la mitad izquierda aquí */}
+                          <div className='text col-xs-6 text__' >
+                              <p className='nuevo mr-rimac '>¡NUEVO!</p>
+                                <p className='seguro text-left'>Seguro <span className='vehicular'>Vehicular</span> </p>
+                                <p className='tracking '>Tracking</p>
+                                <p className='cuentanos ml-0'>Cuentanos donde le haras seguimiento a tu </p>
+                                <p className='cuentanos mr-rimac_3'> seguro</p>
+                          </div>
 
-                        <div className="text-dark text-center ml-0 bottom-div">
-                            <p className=''>© 2021 RIMAC Seguros y Reaseguros.</p>
+                            <div className="text-dark text-center ml-0 bottom-div d-none d-md-block">
+                                <p className=''>© 2021 RIMAC Seguros y Reaseguros.</p>
+                            </div>
                         </div>
-                    </div>
                 </div>
 
                 
 
-                <div className='col-md-6 col-lg-6 col-xl-6 d-flex align-items-center bg-form bg-h'>
+                <div className='col-md-6 col-lg-6 col-xl-6 col-xs-12  d-flex align-items-center bg-form bg-h'>
                     <div className="text-center">
                   
                         {/* Agrega tu contenido para la mitad izquierda aquí */}
                
 
-                        <p className='text-white text-center'>Lorem ipsum adipisicing elit. Enim animi iure,ipsum adipisicing elit. Enim animi iure, architecto nobis esse ea, eveniet odio aperiam fugiat harum, vitae molestias incidunt blanditiis facilis qui minus facere et quae!</p>
+                        <p className='text-white text__- text-center'>Lorem ipsum adipisicing elit. Enim animi iure,ipsum adipisicing elit. Enim animi iure, architecto nobis esse ea, eveniet odio aperiam fugiat harum, vitae molestias incidunt blanditiis facilis qui minus facere et quae!</p>
 
                         
-                        <div className="container " >
+                        <div className="container  " >
                                 <div className="p-4 .w-100 " >
                                 <h1 className='my-5' >Déjanos tus datos</h1>
                                 <div className="mb-3 my-5  ">
@@ -140,7 +142,7 @@ const Test = () => {
                                 <input type="text" className="form-control  " placeholder='Número de Celular' value={phone} onChange={(e) => setPhone(e.target.value)} />
                                 </div>
                                 <div className="mb-3">
-                                <input type="text" className="form-control  " placeholder='Número de Placa' value={accessCode} onChange={(e) => setAccessCode(e.target.value)} />
+                                <input type="text" className="form-control  " placeholder='Número de Placa' value={carPlate} onChange={(e) => setCarPlate(e.target.value)} />
                                 </div>
                                 <div className="input-group-append">
                                 <div className="input-group">
@@ -163,17 +165,18 @@ const Test = () => {
                                     <label className="form-check-label mx-3" htmlFor="colorRadio">
                                       Acepto la Política de Protección de Datos Personales y los Términos y Condiciones.
                                     </label>
-                        </div>
-
-                                <button className="btn btn-danger border-danger my-5 custom-button" onClick={handleLogin}>
-                                COTIZALO
-                                </button>
-                                        {errorMessage && <div className='error_msg'>{errorMessage}</div>}
-                             
+                                    <div className="input-group text-center">
+                                      <div className="text-center ">
+                                      <button className="btn btn-danger  border-danger my-5 custom-button" onClick={handleLogin}>
+                                    COTIZALO
+                                    </button>
+                                      </div>                                       
+                                      </div>                      
+                                   </div>
+                          
+                                        {errorMessage && <div className='error_msg'>{errorMessage}</div>}                             
                                 </div>
-                       
-                          {/* Div pegado a la parte inferior de la pantalla */}
-                               
+                                                        
    
                     </div>
             </div>
