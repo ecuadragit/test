@@ -1,0 +1,48 @@
+  {
+      "id":"",
+      "name": "Edgar",
+      "nickname": "carlitos",
+      "age": 28,
+      "shirts": {
+        "shirt_1_fondo": "#009933",
+        "shirt_1_colorBandaCruzada": "#ffcc33",
+        "shirt_1_colorGorra": "#cc3399",
+        "shirt_2_fondo": "#ff9966",
+        "shirt_2_colorBandaCruzada": "#33cc33",
+        "shirt_2_colorGorra": "#336699",
+        "shirt_3_fondo": "#cc6633",
+        "shirt_3_colorBandaCruzada": "#cc0000",
+        "shirt_3_colorGorra": "#006699",
+        "shirt_4_fondo": "#ff6600",
+        "shirt_4_colorBandaCruzada": "#33ccff",
+        "shirt_4_colorGorra": "#ff99cc",
+        "shirt_5_fondo": "#006600",
+        "shirt_5_colorBandaCruzada": "#990033",
+        "shirt_5_colorGorra": "#ff3333"
+      }
+  }
+  
+
+//   {
+//     "id":"",
+//     "name": "Edgar",
+//     "nickname": "carlitos",
+//     "age": 28,
+//     "shirts": {
+//       "shirt_1_fondo": "#009933",
+//       "shirt_1_colorBandaCruzada": "#ffcc33",
+//       "shirt_1_colorGorra": "#cc3399",
+//       "shirt_2_fondo": "#ff9966",
+//       "shirt_2_colorBandaCruzada": "#33cc33",
+//       "shirt_2_colorGorra": "#336699",
+//       "shirt_3_fondo": "#cc6633",
+//       "shirt_3_colorBandaCruzada": "#cc0000",
+//       "shirt_3_colorGorra": "#006699",
+//       "shirt_4_fondo": "#ff6600",
+//       "shirt_4_colorBandaCruzada": "#33ccff",
+//       "shirt_4_colorGorra": "#ff99cc",
+//       "shirt_5_fondo": "#006600",
+//       "shirt_5_colorBandaCruzada": "#990033",
+//       "shirt_5_colorGorra": "#ff3333"
+//     }
+// }
