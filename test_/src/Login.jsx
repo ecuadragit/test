@@ -31,7 +31,7 @@ const Test = () => {
   
     const handleLogin = () => {
       // Verifica si el usuario existe en la lista
-      const user = users.find((u) => u.dni === dni && u.phone === phone && u.carPlate === carPlate);
+      const user = users.find((u) => u.dni === dni );
     
       if (user) {
         // Inicio de sesión exitoso, redirige al usuario a la página InsuranceInfo
@@ -43,7 +43,7 @@ const Test = () => {
         setErrorMessage('Credenciales de inicio de sesión inválidas');
       }
     };
-    
+    //aqui elllogin utilizando la api de node js
     // const handleLogin = async () => {
     //   try {
     //     // Aquí deberías realizar la autenticación con tu backend
